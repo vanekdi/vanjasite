@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap");
+/* Общие стили для всей страницы */
+
+
+body {
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* Стили для шапки сайта */
+header {
+  color: #333;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.logo {
+  flex: 1;
+}
+
+.logo a {
+  color: #333;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav {
+  text-align: center; 
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 30px;
+}
+
+nav ul li a {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #3498db; /* Изменяем цвет ссылки при наведении */
+}
+/* Остальные стили остаются такими же */
+
+/* Стили поисковика */
+.search-container {
+  display: flex;
+  align-items: center;
+  width: 100%; /* Изменено с 500px на 100%, чтобы занимать всю доступную ширину */
+  max-width: 500px; /* Максимальная ширина сохранена, как было */
+  padding-top: 10px;
+  padding-right: 20px;
+  margin: auto; /* Добавлено, чтобы центрировать контейнер на экране */
+}
+
+#search-input {
+  padding: 8px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+  width: calc(100% - 50px); /* Добавлено: адаптируем ширину для сохранения места под кнопку поиска */
+}
+
+#search-button {
+  height: 38px; /* Добавлено: высота кнопки соответствует высоте search-input с учетом паддингов и бордеров */
+  cursor: pointer; /* Добавлено: изменяет курсор, указывая, что кнопка кликабельна */
+}
+
+#search-input:focus {
+  border-color: #3498db;
+}
+
+#search-button:hover {
+  background-color: #2980b9;
+}
+
+/* Стилизация для мобильных устройств */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .logo a {
+    margin-bottom: 10px;
+  }
+
+  .search-container {
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
+
+/* Стили для основного содержимого страницы */
+main {
+  min-height: calc(100vh - 80px); 
+  padding: 20px;
+}
+
+/* Стили для подвала сайта */
+footer {
+  height: 45px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f9f9f9; 
+  color: #333;
+  text-align: center;
+  padding: 15px 0;
+  font-weight: bold;
+  border-top: 1px solid #ccc;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+/* Добавляем стили для контейнера курсов */
+.courses-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Стили для отдельного курса */
+.course {
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Ширина курса */
+  transition: all 0.3s ease; /* Переместим сюда transition */
+}
+
+.course h2 {
+  color: #333;
+  margin-top: 0; /* Нет отступа сверху для заголовка */
+}
+
+.course p {
+  color: #666;
+}
+
+.course:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+  transform: translateY(-5px); 
+}
+
+
+/* Стили для формы обратной связи */
+.callme {
+  text-align: center;
+}
+form {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Позволяет учитывать padding и border в размерах элемента */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+
+/* Стили для списка */
+ul.def {
+  list-style: none;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Стили для элементов списка */
+ul.def li {
+  padding: 20px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* Стили для изображений внутри ссылок */
+ul.def li a img {
+  width: 225px; 
+  height: 197.5px; 
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+/* Стили для изображений при наведении */
+ul.def li a:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Стили для news */
+
+.news-page {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+}
+
+.news-page h1 {
+  color: #333;
+}
+
+.news-list {
+  max-width: 700px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  list-style-type: none;
+}
+
+.news-item {
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.news-item:last-child {
+  border: none;
+}
+
+.news-item h2 {
+  color: #333;
+}
+
+.news-item p {
+  color: #666;
+}
